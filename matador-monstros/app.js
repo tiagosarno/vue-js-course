@@ -1,8 +1,8 @@
 new Vue({
     el: '#app',
     data: {
-        jogador1: 'Tiago Rocha Sarno',
-        jogador2: 'Monstro Bison',
+        jogador1: 'Blanka',
+        jogador2: 'Mestre Bison',
         lifeJogador: 100,
         lifeMonstro: 100,
         logs: [],
@@ -26,6 +26,18 @@ new Vue({
         },
         especial(){
             return Math.floor(Math.random() * 70);
+        },
+        curar(){
+            let cura = this.random();
+            this.lifeJogador += cura;
+            this.lifeJogador >= 40 ? this.corJogador = 'yellow' : this.corJogador = 'red'
+
+            let contraAtaque = this.contraAtaque();
+            this.lifeJogador -= contraAtaque;
+            this.lifeJogador >= 40 ? this.corJogador = 'yellow' : this.corJogador = 'red'
+
+            this.logs.unshift(`Monstro contra-atacou com ${contraAtaque} de dano`);
+            this.logs.unshift(`Jogador se recuperou em ${cura} pontos`);
         },
         atacar(){
             let ataque = this.random();

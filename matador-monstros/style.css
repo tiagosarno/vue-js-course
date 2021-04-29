@@ -1,9 +1,7 @@
 button { margin: 5px; }
-
 ul, li {
     list-style-type: none;
 }
-
 .box {
     display: flex;
     flex-direction: row;
@@ -13,46 +11,54 @@ ul, li {
     padding: 20px;
     border-radius: 5px;
 }
-
 .grid1 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .grid2 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .buttons {
     width: 100%;
     display: flex;
     justify-content: center;    
 }
-
 .borda-barra {
 	width: 90%;
 	height: 25px;
 	border: 2px solid black;
 }
-
 .progresso {
 	height: 25px;
 }
-
 .column {
     flex-direction: column !important;
     align-items: center !important;
 }
-
 .yellow {
     background-color: yellow;
 }
-
 .red {
     background-color: red;
+}
+.btn-atacar {
+    background-color: rgb(119, 9, 9);
+    color: white;
+}
+.btn-super-ataque {
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+.btn-curar {
+    background-color: rgb(22, 22, 109);
+    color: white;
+}
+.btn-reiniciar {
+    background-color: #f7f7f7;
+    color: #333;
 }

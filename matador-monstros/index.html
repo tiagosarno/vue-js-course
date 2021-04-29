@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style.css" />
 <script src="https://unpkg.com/vue"></script>
-
+<h1>Jogo Matador de Monstros</h1>
 <div id="app">
     <div class="box">
         <div class="grid1">
@@ -20,13 +20,13 @@
     </div>    
     <div class="box">
         <div class="buttons" v-if="!gameOver">
-            <button @click="atacar">Atacar</button>
-            <button @click="atacarEspecial">Super Ataque</button>
-            <button>Curar</button>
+            <button class="btn-atacar" @click="atacar">Atacar</button>
+            <button class="btn-super-ataque" @click="atacarEspecial">Super Ataque</button>
+            <button class="btn-curar" @click="curar">Curar</button>
         </div>
         <div class="buttons column" v-else>
             <div>Fim de Jogo. <strong>{{ resultado }}</strong></div>
-            <button @click="reset">Reiniciar</button>
+            <button class="btn-reiniciar" @click="reset">Reiniciar Jogo</button>
         </div>
     </div>
     <div class="box">
