@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="style.css" />
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <div class="box">
+        <div class="grid1">
+            <div class="name">{{ jogador1 }}</div>
+            <div class="borda-barra">
+                <div class="progresso" :class="corJogador" :style="{width: lifeJogador + '%'}"></div>
+            </div>
+            <div class="life">{{ lifeJogador }}%</div>
+        </div>
+        <div class="grid2">
+            <div class="name">{{ jogador2 }}</div>
+            <div class="borda-barra">
+                <div class="progresso" :class="corMonstro" :style="{width: lifeMonstro + '%'}"></div>
+            </div>
+            <div class="life">{{ lifeMonstro }}%</div>
+        </div>
+    </div>    
+    <div class="box">
+        <div class="buttons" v-if="!gameOver">
+            <button @click="atacar">Atacar</button>
+            <button @click="atacarEspecial">Super Ataque</button>
+            <button>Curar</button>
+        </div>
+        <div class="buttons column" v-else>
+            <div>Fim de Jogo. <strong>{{ resultado }}</strong></div>
+            <button @click="reset">Reiniciar</button>
+        </div>
+    </div>
+    <div class="box">
+        <div class="result">
+            <ul>
+                <li v-for="(log,i) in logs">{{ log }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
