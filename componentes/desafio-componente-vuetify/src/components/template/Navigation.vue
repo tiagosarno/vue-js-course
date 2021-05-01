@@ -11,6 +11,9 @@ import ToolBar from './ToolBar.vue'
 import List from './List.vue'
 
 export default {
-    components: { ToolBar: ToolBar, List: List }
+    components: { 
+      ToolBar, 
+      List 
+    }
 }
 </script>

@@ -15,10 +15,10 @@ import Body from '../views/Body.vue'
 
 export default {
   components: { 
-    Navigation: Navigation,
-    AppBar: AppBar,
-    Footer: Footer,
-    Body: Body
+    Navigation,
+    AppBar,
+    Footer,
+    Body
   }
 }
 </script>
