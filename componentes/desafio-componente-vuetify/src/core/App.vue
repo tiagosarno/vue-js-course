@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
-import AppBar from './components/AppBar.vue'
-import Footer from './components/Footer.vue'
-import Body from './components/Body.vue' 
+import Navigation from '../components/template/Navigation.vue'
+import AppBar from '../components/template/AppBar.vue'
+import Footer from '../components/template/Footer.vue'
+import Body from '../views/Body.vue' 
 
 export default {
   components: { 
