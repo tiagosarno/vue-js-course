@@ -28,7 +28,7 @@ export default {
         reiniciarNome() {
             this.nome = 'Rocha'
             
-            // Emitindo um evento customizado..
+            // Emitindo um evento customizado para o componente pai
             this.$emit('nomeMudou', this.nome)
         }
     }
