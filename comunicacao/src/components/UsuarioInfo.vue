@@ -3,7 +3,10 @@
         <h2>As Informações de Usuário</h2>
         <p>Usuário: {{ nome }}</p>
         <p>Usuário invertido: {{ inverterNome() }}</p>
+        <p>Idade do usuário <strong>{{ idade }}</strong></p>
+        <p>Fone: <strong>{{ fone }}</strong></p>
         <button @click="reiniciarNome">Reiniciar Nome</button>
+        <button @click="reiniciarFn">Reiniciar Nome (Chamada CallBack Pai)</button>
     </div>
 </template>
 
@@ -19,7 +22,14 @@ export default {
                 return 'Rocha'
             }
             */
-        }
+        },
+        idade: Number,
+        fone: {
+            type: Number,
+            required: true,
+            default: 992504589
+        },
+        reiniciarFn: Function
     },
     methods: {
         inverterNome() {
