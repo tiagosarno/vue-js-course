@@ -8,9 +8,7 @@
 
 <script>
 export default {
-    created() {
-        console.log('Componente criado novamente')
-    }
+    
 }
 </script>
 
