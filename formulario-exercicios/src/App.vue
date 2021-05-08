@@ -40,6 +40,10 @@
 					<Escolha v-model="escolha" />
 				</Rotulo>
 				<hr>
+				<!-- 
+				@click.prevent, previne a ação default do submit e
+				pode ser tratado em um método específico criado pelo Dev
+				-->
 				<button @click.prevent="enviar">Enviar</button>
 			</div>
 			<div class="painel" v-else>
